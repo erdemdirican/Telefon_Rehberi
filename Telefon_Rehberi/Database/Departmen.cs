@@ -11,7 +11,8 @@ namespace Telefon_Rehberi.Database
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Departmen
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace Telefon_Rehberi.Database
         }
     
         public int Id { get; set; }
+        
+        [RegularExpression("^[a-zA-Z]*$")]
         public string DepartmanAdi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

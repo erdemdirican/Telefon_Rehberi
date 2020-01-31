@@ -38,7 +38,7 @@ namespace Telefon_Rehberi.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login", "AdminUI");
             }
         }
 
@@ -124,8 +124,6 @@ namespace Telefon_Rehberi.Controllers
             System.Diagnostics.Debug.WriteLine("tel" + personel.PersonelTelNo);
             System.Diagnostics.Debug.WriteLine("yonetici" + personel.YoneticiID);
             System.Diagnostics.Debug.WriteLine("departman" + personel.DepartmanID);
-
-
 
             context.Entry<Database.Personels>(personel).State = System.Data.Entity.EntityState.Added;
             try

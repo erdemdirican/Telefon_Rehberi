@@ -33,15 +33,11 @@
                     <td>
                         @if (item.PersonelSayisi == 0)
                         {
-
-                            <a type="button" onclick="Delete('@Url.Action("Delete","PublicUI", new { id = item.departman.Id })')" class="btn btn-danger ">
-                                <span class="fa fa-trash "></span> Sil
-                            </a>
+                            <a type="button" onclick="Delete('@Url.Action("Delete","PublicUI", new { id = item.departman.Id })')" class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span> Sil</a>
                         }
                         else
                         {
-
-                            <a type="button" onclick="Delete('@Url.Action("Delete","PublicUI", new { id = 0 })')" class="btn btn-danger "> <span class="fa fa-trash "></span> Sil</a>
+                            <a type="button" onclick="Delete('@Url.Action("Delete","PublicUI", new { id = 0 })')" class="btn btn-danger "><span class="glyphicon glyphicon-trash"></span> Sil</a>
                         }
                     </td>
                     <td></td>
@@ -70,4 +66,4 @@
 @Html.Partial("ResultControl", "Silmek istediğinize emin misiniz?")
 
 
- 
+

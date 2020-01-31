@@ -11,12 +11,19 @@ namespace Telefon_Rehberi.Database
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Personels
     {
         public int Id { get; set; }
+        
+        [RegularExpression("^[a-zA-Z]*$")]
         public string PersonelAdi { get; set; }
+        
+        [RegularExpression("^[a-zA-Z]*$")]
         public string PersonelSoyadi { get; set; }
+
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$")]
         public string PersonelTelNo { get; set; }
         public int YoneticiID { get; set; }
         public int DepartmanID { get; set; }
